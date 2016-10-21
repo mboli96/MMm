@@ -8,9 +8,9 @@ function [TiempoMedio] = MMm(lambda, mu, m)
     for n = 0:m-1
         sumatoria = sumatoria + ((lambda / mu)^n) / factorial(n);
     end
-    Po = 1 / (sumatoria + (((lambda / mu)^m) / factorial(m)) * (m * mu / (m*mu - lambda)))
+    Po = 1 / (sumatoria + (((lambda / mu)^m) / factorial(m)) * (m * mu / (m*mu - lambda)));
     Pq = (Po * (m^m) * ro^m) / (factorial(m) * (1 - ro));
     
-    Tiempo_medio = (1 / mu) + (ro * Pq) / (lambda * (1-ro))
+    Tiempo_medio = (1 / mu) + (ro * Pq) / (lambda * (1-ro));
 end
         
